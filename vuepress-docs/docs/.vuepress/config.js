@@ -30,6 +30,5 @@ export default defineUserConfig({
   }),
 
   // GitHub Pages 部署配置
-  //base: "/code-hub/", // 仓库名（若部署到根目录则删除此行）
-  base: "/",
+  base: "/code-hub/", // 仓库名（若部署到根目录则删除此行）
 });
