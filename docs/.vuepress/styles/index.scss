@@ -11,7 +11,7 @@
 /* 每个提示容器的基本样式 */
 #markdown-content .hint-container {
   flex: 1;
-  min-width: 300; /* 防止内容溢出 */
+  min-width: 0; /* 防止内容溢出 */
   padding: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
