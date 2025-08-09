@@ -1,0 +1,30 @@
+import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
+import theme from "./theme.js"
+
+export default defineUserConfig({
+  // 基础配置
+  bundler: viteBundler(), // 使用 Vite
+  head: [
+    ['link', { rel: 'stylesheet', href: '/styles/index.css' }]
+   ],
+  theme,
+  lang: "zh-CN",
+  title: "技术文档",
+  keywords: "面试题",
+  description: "c++ 面试题，面试指南, leetcode算法笔记",
+
+  // GitHub Pages 部署配置
+  //base: "/code-hub/", // 仓库名（若部署到根目录则删除此行）
+  //extendsMarkdown: (md) => {
+  //  md.set({ script: true })
+  //},
+  bundlerConfig: {
+    viteOptions: {
+      ssr: {
+        noExternal: ['@vuepress/client']
+      }
+    }
+  },
+
+});

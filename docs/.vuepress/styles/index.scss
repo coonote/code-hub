@@ -1,0 +1,33 @@
+/* 横向排列容器 */
+#markdown-content {
+  display: flex;
+  gap: 1.5rem;
+  justify-content:center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+/* 每个提示容器的基本样式 */
+#markdown-content .hint-container {
+  flex: 1;
+  min-width: 300; /* 防止内容溢出 */
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+#markdown-content .hint-container-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 响应式设计 - 小屏幕下垂直排列 */
+@media (max-width: 768px) {
+  #markdown-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

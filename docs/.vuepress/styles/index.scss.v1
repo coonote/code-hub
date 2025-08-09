@@ -1,0 +1,83 @@
+/* 横向排列容器 */
+#markdown-content {
+  display: flex;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.hint-container {
+  color: red !important;
+  background: red !important;
+}
+
+/* 每个提示容器的基本样式 */
+#markdown-content .hint-container {
+  flex: 1;
+  min-width: 0; /* 防止内容溢出 */
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* 悬停效果 */
+#markdown-content .hint-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* info 容器特定样式 */
+#markdown-content .hint-container.info {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 4px solid #0ea5e9;
+}
+
+/* tip 容器特定样式 */
+#markdown-content .hint-container.tip {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-left: 4px solid #22c55e;
+}
+
+/* 标题样式 */
+#markdown-content .hint-container-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 列表样式 */
+#markdown-content ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+#markdown-content li {
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+#markdown-content li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#markdown-content a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+#markdown-content a:hover {
+  color: var(--c-brand);
+}
+
+/* 响应式设计 - 小屏幕下垂直排列 */
+@media (max-width: 768px) {
+  #markdown-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
