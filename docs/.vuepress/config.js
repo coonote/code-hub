@@ -12,10 +12,10 @@ export default defineUserConfig({
   description: "c++ 面试题，面试指南, leetcode算法笔记",
 
   // GitHub Pages 部署配置
-  //base: "/code-hub/", // 仓库名（若部署到根目录则删除此行）
-  //extendsMarkdown: (md) => {
-  //  md.set({ script: true })
-  //},
+  base: "/code-hub/", // 仓库名（若部署到根目录则删除此行）
+  extendsMarkdown: (md) => {
+    md.set({ script: true })
+  },
   bundlerConfig: {
     viteOptions: {
       ssr: {
